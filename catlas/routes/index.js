@@ -3,7 +3,17 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Catlas' });
+  res.render('index', { title: 'CATLAS' });
+});
+
+/* GET about page. */
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'CATLAS' });
+});
+
+/* GET map page. */
+router.get('/map', function(req, res, next) {
+  res.render('map', { title: 'CATLAS' });
 });
 
 module.exports = router;
