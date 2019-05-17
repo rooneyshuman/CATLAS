@@ -22,6 +22,23 @@
   position: relative;
 }
 
+#main-container {
+  padding: 0%;
+  width: 500px;
+  color: white;
+  top: 90px;
+  left: 120px;
+  position: absolute;
+}
+
+#mapper {
+  font-size: 4vw;
+}
+
+#connecting {
+  font-size: 1.8vw;
+}
+
 body {
   font-family: 'Archivo', sans-serif;
 }
