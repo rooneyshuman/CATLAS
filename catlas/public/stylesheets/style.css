@@ -1,3 +1,4 @@
+/* Navbar styles */
 .nav-link{
   color : rgb(247, 102, 19) !important;
   font-size: 17px;
@@ -9,8 +10,19 @@
   color :  rgb(30, 139, 139)!important;
 }
 
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+/* Index - Main styles */
+#main-cat {
+  background-image: url("/images/cat.jpg");
+  background-size: cover;
+  padding-top: 20%;
+  padding-bottom: 23%;
+  background-color: #fff;
+  background-size: cover;
+  background-position-y: 35%;
+  position: relative;
+}
 
-a {
-  color: #00B7FF; }
+body {
+  font-family: 'Archivo', sans-serif;
+}
+
