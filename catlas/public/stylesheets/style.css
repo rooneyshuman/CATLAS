@@ -24,7 +24,6 @@
 
 #main-container {
   padding: 0%;
-  width: 500px;
   color: white;
   top: 90px;
   left: 120px;
@@ -40,7 +39,7 @@
 }
 
 #main-buttons {
-  margin-left: 120px;
+  margin-left: 110px;
 }
 
 @media (max-width: 768px) {
