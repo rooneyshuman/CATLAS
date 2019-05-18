@@ -11,26 +11,13 @@
 }
 
 /* Index - Main styles */
-
-#mapper {
-  font-size: 4vw;
-}
-
-#connecting {
-  font-size: 1.8vw;
-}
-
 #main-cat {
   background-image: url("/images/cat.jpg");
   background-size: cover;
-  padding-top: 20%;
-  padding-bottom: 23%;
-  background-color: #fff;
-  background-position-y: 35%;
-  position: relative;
 }
 
 #main-container {
+  width: auto;
   padding: 0%;
   color: white;
   top: 90px;
@@ -39,26 +26,24 @@
 }
 
 #main-buttons {
+  width: auto;
   margin-left: 110px;
 }
 
 /* Mobile sizing */
-@media (max-width: 768px) {
+@media (max-width: 420px) {
   #main-cat {
-    background-image: url("/images/cat.jpg");
-    background-size: cover;
     padding-top: 50%;
     padding-bottom: 50%;
-    background-color: #fff;
     background-position-y: 35%;
     background-position-x: 85%;
     position: relative;
   }
 
   #main-container {
-    padding-right: 50%;
+    padding-right: 30%;
     color: white;
-    top: 40px;
+    top: 30px;
     left: 40px;
     position: absolute;
   }
@@ -68,35 +53,99 @@
   }
   
   #connecting {
-    font-size: 4vw;
+    font-size: 3vw;
     padding-right: 40%;
+    margin: 0;
   }
-  
 
   #main-buttons {
     margin-left: 30px;
-    top: 230px;
+    top: 250px;
     left: 40px;
     position: absolute;
   }
 
   .btn-responsive {
-    padding: 4px 4px;
+    padding: 4px 6px;
     font-size: 80%;
     line-height: 1;
-    border-radius:3px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
+/* Tablet sizing */
+@media (min-width: 421px) and (max-width: 768px) {
+  #main-cat {
+    padding-top: 200px;
+    padding-bottom: 20%;
+    background-position-y: 35%;
+    background-position-x: 85%;
+    position: relative;
+  }
+  
+  #main-container {
+    width: 80%;
+    padding: 0%;
+    color: white;
+    top: 90px;
+    left: 120px;
+    position: absolute;
+  }
+  
+  #mapper {
+    font-size: 4vw;
+  }
+  
+  #connecting {
+    font-size: 1.8vw;
+    margin: 0;
+  }
+
   #main-buttons {
+    width: 80%;
     margin-left: 110px;
   }
 
   .btn-responsive {
-    padding:4px 9px;
-    font-size:90%;
-    line-height: 1.2;
+    padding: 4px 6px;
+    font-size: 80%;
+    line-height: 1;;
+  }
+}
+
+/* All other sizes */
+@media (min-width: 769px) {
+  #main-cat {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-position-y: 35%;
+    position: relative;
+  }
+  
+  #main-container {
+    width: 80%;
+    color: white;
+    top: 90px;
+    left: 120px;
+    position: absolute;
+  }
+  
+  #main-buttons {
+    padding-top: 0;
+    margin-left: 100px;
+  }
+
+  #mapper {
+    font-size: 4vw;
+  }
+  
+  #connecting {
+    font-size: 1.8vw;
+    margin: 0;
+  }
+
+  .btn-responsive {
+    padding:8px 12px;
+    font-size: 100%;
   }
 }
 
@@ -104,3 +153,6 @@ body {
   font-family: 'Archivo', sans-serif;
 }
 
+footer {
+  padding-top: 1.4%;
+}
