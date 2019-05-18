@@ -56,12 +56,22 @@
   }
 
   #main-container {
-    padding: 0%;
+    padding-right: 50%;
     color: white;
     top: 40px;
     left: 40px;
     position: absolute;
   }
+
+  #mapper {
+    font-size: 6vw;
+  }
+  
+  #connecting {
+    font-size: 4vw;
+    padding-right: 40%;
+  }
+  
 
   #main-buttons {
     margin-left: 30px;
