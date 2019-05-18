@@ -14,9 +14,9 @@ We used the following frameworks for build this full-stack web-app:
 * [Bootstrap4](https://getbootstrap.com/) - Styling framework
 * [Express](https://expressjs.com/) - Web application framework
 * [Npm](https://www.npmjs.com/) - Package manager
-* [HTML] (https://developer.mozilla.org/en-US/docs/Learn/HTML) - Webpage structure
-* [CSS3] (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Additional styling
-* [Maps API] (https://developers.google.com/maps/documentation/javascript) - Map support
+* [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/) - Webpage structure
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3/) - Additional styling
+* [Maps API](https://developers.google.com/maps/documentation/javascript/) - Map support
 
 ## Authors
 
