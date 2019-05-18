@@ -11,13 +11,21 @@
 }
 
 /* Index - Main styles */
+
+#mapper {
+  font-size: 4vw;
+}
+
+#connecting {
+  font-size: 1.8vw;
+}
+
 #main-cat {
   background-image: url("/images/cat.jpg");
   background-size: cover;
   padding-top: 20%;
   padding-bottom: 23%;
   background-color: #fff;
-  background-size: cover;
   background-position-y: 35%;
   position: relative;
 }
@@ -30,28 +38,51 @@
   position: absolute;
 }
 
-#mapper {
-  font-size: 4vw;
-}
-
-#connecting {
-  font-size: 1.8vw;
-}
-
 #main-buttons {
   margin-left: 110px;
 }
 
+/* Mobile sizing */
 @media (max-width: 768px) {
+  #main-cat {
+    background-image: url("/images/cat.jpg");
+    background-size: cover;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    background-color: #fff;
+    background-position-y: 35%;
+    background-position-x: 85%;
+    position: relative;
+  }
+
+  #main-container {
+    padding: 0%;
+    color: white;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+  }
+
+  #main-buttons {
+    margin-left: 30px;
+    top: 230px;
+    left: 40px;
+    position: absolute;
+  }
+
   .btn-responsive {
-    padding:2px 4px;
-    font-size:80%;
+    padding: 4px 4px;
+    font-size: 80%;
     line-height: 1;
     border-radius:3px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+  #main-buttons {
+    margin-left: 110px;
+  }
+
   .btn-responsive {
     padding:4px 9px;
     font-size:90%;

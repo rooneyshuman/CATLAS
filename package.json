@@ -12,13 +12,15 @@
   "author": "Belen-Bustamante, Mack Cooper",
   "license": "MIT",
   "dependencies": {
-    "cookie-parser": "~1.4.3",
+    "cookie-parser": "^1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "^1.7.2",
-    "morgan": "~1.9.0",
-    "node-sass-middleware": "0.11.0"
+    "morgan": "^1.9.1",
+    "node-sass": "^4.12.0",
+    "node-sass-middleware": "^0.11.0",
+    "on-finished": "^2.3.0"
   },
   "engines": {
     "node": "11.x"
