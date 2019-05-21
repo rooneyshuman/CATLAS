@@ -1,3 +1,4 @@
-.googlemap {
-    height: 100%;
+#googlemap {
+    height: 1000px;
+    box-sizing: content-box;
 }

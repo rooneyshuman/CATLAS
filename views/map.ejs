@@ -13,8 +13,19 @@
 
   <main>
     <div class="jumbotron">
-      <h1>Map goes here</h1>
-      <div class="googlemap"></div>
+      <h1>Map goes below</h1>
+      <div id="googlemap" class="map-container">map here</div>
+      <script>
+      var map;
+      function initGoogleMap() {
+        map = new google.maps.Map(document.getElementById('googlemap'), {
+            center: {lat: 45, lng: 122},
+            zoom: 8
+        });
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initGoogleMap" async defer></script>
+      <h1>Map goes above</h1>
     </div>
   </main>
 
