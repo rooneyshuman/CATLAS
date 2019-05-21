@@ -16,4 +16,10 @@ router.get('/map', function(req, res, next) {
   res.render('map', { title: 'CATLAS' });
 });
 
+/* GET form page. */
+router.get('/form', function(req, res, next) {
+  res.render('form', { title: 'CATLAS' });
+});
+
+
 module.exports = router;
