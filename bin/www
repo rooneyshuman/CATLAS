@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /**
  * Module dependencies.
  */
@@ -7,6 +5,9 @@
 var app = require('../app');
 var debug = require('debug')('catlas:server');
 var http = require('http');
+var mongoose = require ("mongoose");
+
+var dbURI = 'mongodb+srv://catlas_user:' + process.env.DB_PW + '@catlasdb-zlvpm.mongodb.net/catList?retryWrites=true';
 
 /**
  * Get port from environment and store in Express.
@@ -14,6 +15,17 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+/**
+ * Connect to MongoDB database 
+ */ 
+mongoose.connect(dbURI, { useNewUrlParser: true }, function (err, res) {
+  if (err) {
+  console.log ('ERROR connecting to db.' +  err);
+  } else {
+  console.log ('Succeeded connecting to db');
+  }
+});
 
 /**
  * Create HTTP server.
