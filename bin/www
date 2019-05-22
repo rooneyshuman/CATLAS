@@ -10,10 +10,10 @@ var mongoose = require ("mongoose");
 var dbURI = 'mongodb+srv://catlas_user:' + process.env.DB_PW + '@catlasdb-zlvpm.mongodb.net/catList?retryWrites=true';
 
 /**
- * Get port from environment and store in Express.
+ * Get variables from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = require('../config');
 app.set('port', port);
 
 /**
@@ -40,7 +40,7 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-console.log('Open your browser to http://localhost:3000');
+console.log('Open your browser to http://localhost:' + process.env.PORT);
 
 /**
  * Normalize a port into a number, string, or false.

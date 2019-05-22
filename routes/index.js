@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
 var catList = require('../model');
+=======
+var api_key = require('../config')['api_key'];
+>>>>>>> ff839c14c500bd1eaae3ce23f92ea90487053b53
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -14,7 +18,7 @@ router.get('/about', function(req, res, next) {
 
 /* GET map page. */
 router.get('/map', function(req, res, next) {
-  res.render('map', { title: 'CATLAS' });
+  res.render('map', { title: 'CATLAS', key: api_key });
 });
 
 /* GET form page. */
