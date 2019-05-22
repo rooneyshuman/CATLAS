@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var catList = require('../model');
-var api_key = require('../config')['api_key'];
+var api_key = require('../config').api_key;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

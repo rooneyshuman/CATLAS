@@ -4,7 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
-var mongoose = require('mongoose');                     // mongoose for mongodb
 var bodyParser = require('body-parser');                // pull information from HTML POST (express4)
 
 var indexRouter = require('./routes/index');
