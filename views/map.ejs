@@ -12,8 +12,43 @@
   </header>
 
   <main>
-    <div class="jumbotron">
-      <h1>Map goes here</h1>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="jumbotron">
+          <h1>Map goes here!</h1>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div>
+          <h3>List of mapped cats</h3>
+          <table class="table table-bordered table-striped table-light">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Color</th>
+                <th scope="col">Date Found</th>
+                <!-- <th scope="col">Longitude</th>
+                <th scope="col">Latitude</th> -->
+                <th scope="col">Breed</th>
+                <th scope="col">Size</th>
+              </tr>
+            </thead>
+            <% for(var i in cats) { %>
+            <tr>
+              <th scope="row"><%= i %></th>
+              <td><%= cats[i].color %></td>
+              <td><%= cats[i].dateFound %></td>
+              <!-- <td><%= cats[i].location.long %></td>
+              <td><%= cats[i].location.lat %></td> -->
+              <td><%= cats[i].breed %></td>
+              <td><%= cats[i].size %></td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+      </div>
+
     </div>
   </main>
 
