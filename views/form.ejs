@@ -18,40 +18,65 @@
         <p class="lead">Enter the information for the cat you have found and it'll be added to the Cat Map.</p>
       </div>
       <div class="container bg-light d-flex justify-content-center align-items-center">
-        <form class="py-3" method="POST" action='/add'>
+        <form class="py-3 ml-3 needs-validation novalidate" method="POST" action='/add'>
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Color:</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" id="color" name="color">
+            <label class="col-sm-5 col-form-label">Color:</label>
+            <div class="col-sm-7">
+              <select class="form-control" name="color">
+                <option>black</option>
+                <option>blue</option>
+                <option>chocolate</option>
+                <option>cinnammon</option>
+                <option>cream</option>
+                <option>fawn</option>
+                <option>hairless</option>
+                <option>lilac</option>
+                <option>red</option>
+                <option>smoke</option>
+                <option>white</option>
+              </select>
             </div>
           </div>
+
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Date Found:</label>
-            <div class="col-sm-6">
+            <label class="col-sm-5 col-form-label">Date Found:</label>
+            <div class="col-sm-7">
               <input type="date" class="form-control" id="dateFound" name="dateFound">
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Location:</label>
-            <label class="col-sm-2 col-form-label">Longitude</label>
-            <div class="col-sm-2">
-              <input type="text" class="form-control" id="long" name="long">
-            </div>
-            <label class="col-sm-2 col-form-label">Latitude</label>
-            <div class="col-sm-2">
-              <input type="text" class="form-control" id="lat" name="lat">
+            <label class="col-sm-5 col-form-label">Latitude:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="lat" name="lat" placeholder="latitude">
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Breed:</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" id="breed" name="breed">
+            <label class="col-sm-5 col-form-label">Longitude:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="long" name="long" placeholder="longitude">
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Size:</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" id="size" name="size">
+            <label class="col-sm-5 col-form-label">Breed:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="breed" name="breed" placeholder="breed">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Size:</label>
+            <div class="row ml-3 mt-1">
+              <div class="form-check">
+                <input class="form-check-input form-control" type="radio" name="size" value="small">
+                <label class="form-check-label">small</label>
+              </div>
+              <div class="form-check mx-3">
+                <input class="form-check-input form-control" type="radio" name="size" value="medium">
+                <label class="form-check-label">medium</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input form-control" type="radio" name="size" value="large">
+                <label class="form-check-label">large</label>
+              </div>
             </div>
           </div>
           <div class="form-group row">
