@@ -3,6 +3,7 @@
 
 <head>
   <% include partials/head %>
+  <link rel='stylesheet' href='/stylesheets/map.css' />
 </head>
 
 <body>
@@ -13,9 +14,34 @@
 
   <main>
     <div class="row">
+
       <div class="col-sm-8">
         <div class="jumbotron">
-          <h1>Map goes here!</h1>
+            <h3>My Google Maps Demo</h3>
+            <!--The div element for the map -->
+            <div id="map"></div>
+            <script>
+              // Initialize and add the map
+              function initMap() {
+                // The location of Portland
+                var portland = {lat: 45.523064, lng: -122.676483};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 12, center: portland});
+                // The marker, positioned at Uluru
+                function addMarker(location, map) {  
+                  var marker = new google.maps.Marker({position: location, map: map});
+                }
+              }
+            </script>
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+            <script async defer
+            src='https://maps.googleapis.com/maps/api/js?key=<%=key%>&callback=initMap'>
+            </script>
         </div>
       </div>
 
@@ -39,8 +65,10 @@
               <th scope="row"><%= i %></th>
               <td><%= cats[i].color %></td>
               <td><%= cats[i].dateFound %></td>
-              <!-- <td><%= cats[i].location.long %></td>
-              <td><%= cats[i].location.lat %></td> -->
+              <!-- 
+                <td><%= cats[i].location.long %></td>
+                <td><%= cats[i].location.lat %></td> 
+              -->
               <td><%= cats[i].breed %></td>
               <td><%= cats[i].size %></td>
             </tr>
@@ -50,6 +78,7 @@
       </div>
 
     </div>
+    
   </main>
 
   <footer>
