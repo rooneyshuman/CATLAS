@@ -3,6 +3,7 @@ var router = express.Router();
 var catList = require('../models/model');
 var api_key = require('../config').api_key;
 var cat_breeds = require('../public/assets/cat_breeds');
+var moment = require('moment');
 
 /* GET home page */
 router.get('/', function (req, res, next) {
@@ -41,7 +42,7 @@ router.post('/add', function (req, res) {
   // Create a new cat
   catList.create({
     color: req.body.color,
-    dateFound: req.body.dateFound,
+    dateFound: moment(req.body.dateFound).format('DD/MM/YYYY'),
     location: {
       long: req.body.long,
       lat: req.body.lat

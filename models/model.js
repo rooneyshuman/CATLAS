@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const cat = new mongoose.Schema({
     color : String,
     dateFound : {
-      type: Date,
+      type: String,
       default : Date.now
     },
     location : {
