@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var catList = require('../model');
+var catList = require('../models/model');
 var api_key = require('../config').api_key;
+var cat_breeds = require('../public/assets/cat_breeds');
 
 /* GET home page */
 router.get('/', function (req, res, next) {
@@ -20,7 +21,6 @@ router.get('/map', function (req, res, next) {
     if (err)
       res.send(err)
 
-    console.log(cats)
     res.render('map', { title: 'CATLAS', key: api_key, cats: cats });
   });
 });
@@ -30,6 +30,11 @@ router.get('/form', function (req, res, next) {
   res.render('form', { title: 'CATLAS' });
 });
 
+/* GET cat breeds from JSON - used by form page*/
+router.get('/cat_breeds.json', function (req, res) {
+  res.header("Content-Type",'application/json');
+  res.send(JSON.stringify(cat_breeds));
+})
 
 /* POST to database */
 router.post('/add', function (req, res) {
