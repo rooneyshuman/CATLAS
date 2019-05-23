@@ -13,37 +13,78 @@
   </header>
 
   <main>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Portland
-        var portland = {lat: 45.523064, lng: -122.676483};
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 12, center: portland});
-        // The marker, positioned at Uluru
-        function addMarker(location, map) {  
-          var marker = new google.maps.Marker({position: location, map: map});
-        }
-      }
-    </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
-    <script async defer
-    src='https://maps.googleapis.com/maps/api/js?key=<%=key%>&callback=initMap'>
-    </script>
+    <div class="row">
+
+      <div class="col-sm-8">
+        <div class="jumbotron">
+            <h3>My Google Maps Demo</h3>
+            <!--The div element for the map -->
+            <div id="map"></div>
+            <script>
+              // Initialize and add the map
+              function initMap() {
+                // The location of Portland
+                var portland = {lat: 45.523064, lng: -122.676483};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 12, center: portland});
+                // The marker, positioned at Uluru
+                function addMarker(location, map) {  
+                  var marker = new google.maps.Marker({position: location, map: map});
+                }
+              }
+            </script>
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+            <script async defer
+            src='https://maps.googleapis.com/maps/api/js?key=<%=key%>&callback=initMap'>
+            </script>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div>
+          <h3>List of mapped cats</h3>
+          <table class="table table-bordered table-striped table-light">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Color</th>
+                <th scope="col">Date Found</th>
+                <!-- <th scope="col">Longitude</th>
+                <th scope="col">Latitude</th> -->
+                <th scope="col">Breed</th>
+                <th scope="col">Size</th>
+              </tr>
+            </thead>
+            <% for(var i in cats) { %>
+            <tr>
+              <th scope="row"><%= i %></th>
+              <td><%= cats[i].color %></td>
+              <td><%= cats[i].dateFound %></td>
+              <!-- 
+                <td><%= cats[i].location.long %></td>
+                <td><%= cats[i].location.lat %></td> 
+              -->
+              <td><%= cats[i].breed %></td>
+              <td><%= cats[i].size %></td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    
   </main>
 
   <footer>
     <% include partials/footer %>
   </footer>
-  
+
 </body>
 
 </html>
