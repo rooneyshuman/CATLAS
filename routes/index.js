@@ -42,7 +42,7 @@ router.post('/add', function (req, res) {
   // Create a new cat
   catList.create({
     color: req.body.color,
-    dateFound: moment(req.body.dateFound).format('DD/MM/YYYY'),
+    dateFound: moment(req.body.dateFound).format('MM/DD/YYYY'),
     location: {
       long: req.body.long,
       lat: req.body.lat
