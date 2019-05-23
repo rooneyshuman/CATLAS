@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
   <header>
     <% include partials/header %>
   </header>
@@ -24,7 +25,9 @@
         var map = new google.maps.Map(
             document.getElementById('map'), {zoom: 12, center: portland});
         // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map});
+        function addMarker(location, map) {  
+          var marker = new google.maps.Marker({position: location, map: map});
+        }
       }
     </script>
     <!--Load the API from the specified URL
