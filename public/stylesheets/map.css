@@ -1,4 +1,12 @@
 #map {
-    height: 600px;  /* The height is 600 pixels */
-    width: 100%;  /* The width is the width of the web page */
+    height: 600px; 
+    width: auto;
+}
+
+#cat-table {
+    margin-left: 20px;
+}
+
+.row {
+    width: auto;
 }
