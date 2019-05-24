@@ -1,0 +1,33 @@
+#main_container {
+    width: auto;
+    background: rgb(235,235,235);
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/* All other sizes */
+@media (min-width: 576px) {
+    #main_container {
+        background-image: url("/images/peeking_cat.png");
+        background-position-y: 100%;
+        background-position-x: 1%;
+        margin-right: 0;
+        background-size: cover;
+        }
+    }
+
+/* Mobile sizing */
+@media (max-width: 575px) {
+    #main_container {
+        background-image: url("/images/peeking_cat_mobile.png");
+        background-size: cover;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p.lead {
+        font-size: 15pt;
+    }
+}
