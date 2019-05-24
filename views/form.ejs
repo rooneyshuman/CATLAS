@@ -20,11 +20,12 @@
           <p class="lead">Enter the info for the cat you found and we'll add it to the Cat Map</p>
         </div>
         <div class="container ml-2 d-flex justify-content-center align-items-center">
-          <form class="col-xs-8 px-0 needs-validation novalidate text-info" method="POST" action='/add'>
+          <form class="col-xs-8 px-0 text-info" method="POST" action='/add'>
             <div class="form-group row">
               <label class="px-0 col-sm-4 col-form-label">Color:</label>
               <div class="px-0 ml-2 col-sm-7">
-                <select class="form-control" name="color">
+                <select class="form-control" name="color" required>
+                  <option value="" selected disabled>color select</option>
                   <option>black</option>
                   <option>blue</option>
                   <option>chocolate</option>
@@ -43,28 +44,28 @@
             <div class="form-group row">
               <label class="px-0 col-sm-4 col-form-label">Date Found:</label>
               <div class="px-0 ml-2 col-sm-7">
-                <input type="date" class="form-control" id="dateFound" name="dateFound">
+                <input type="date" class="form-control" id="dateFound" name="dateFound" required>
               </div>
             </div>
 
             <div class="form-group row">
               <label class="px-0 col-sm-4 col-form-label">Latitude:</label>
               <div class="px-0 ml-2 col-sm-7">
-                <input type="text" class="form-control" id="lat" name="lat" placeholder="latitude">
+                <input type="text" class="form-control" id="lat" name="lat" placeholder="latitude" required>
               </div>
             </div>
 
             <div class="form-group row">
               <label class="px-0 col-sm-4 col-form-label">Longitude:</label>
               <div class="px-0 ml-2 col-sm-7">
-                <input type="text" class="form-control" id="long" name="long" placeholder="longitude">
+                <input type="text" class="form-control" id="long" name="long" placeholder="longitude" required>
               </div>
             </div>
 
             <div class="form-group row">
               <label class="px-0 col-sm-4 col-form-label">Breed:</label>
               <div class="px-0 ml-2 col-sm-7">
-                <input type="text" class="form-control" id="breed" name="breed" placeholder="breed">
+                <input type="text" class="form-control" id="breed" name="breed" placeholder="breed" required>
               </div>
             </div>
 
@@ -72,15 +73,15 @@
               <!-- <label class="px-0 col-sm-4 col-form-label">Size:</label> -->
               <div class="px-0 col-sm-12 ml-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" id="small_opt" type="radio" name="size" value="small">
+                  <input class="form-check-input" id="small_opt" type="radio" name="size" value="small" required>
                   <label class="form-check-label" for="small_opt">small</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size" value="medium">
+                  <input class="form-check-input" type="radio" name="size" value="medium" required>
                   <label class="form-check-label">medium</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size" value="large">
+                  <input class="form-check-input" type="radio" name="size" value="large" required>
                   <label class="form-check-label">large</label>
                 </div>
               </div>
