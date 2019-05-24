@@ -1,0 +1,20 @@
+/* Navbar styles */
+.nav-link{
+    color : rgb(247, 102, 19) !important;
+    font-size: 17px;
+  }
+  .nav-item > a:hover {
+      color :rgb(30, 139, 139)!important;
+  }
+  .nav-item.active .nav-link {
+    color :  rgb(30, 139, 139)!important;
+  }
+
+  body {
+    font-family: 'Archivo', sans-serif;
+  }
+
+/* Footer styles */ 
+footer {
+    padding-top: 1.4%;
+  }
