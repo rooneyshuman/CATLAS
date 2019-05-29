@@ -14,8 +14,15 @@
 
   <main>
     <div class="row">
+    
+      <div class="col-sm-7">
+        <div id="map"></div>
+        <script type="text/javascript" src="javascripts/map.js"></script>
+        <script src='https://maps.googleapis.com/maps/api/js?key=<%=key%>&callback=initMap'
+          async defer ></script>
+      </div>
 
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <div id="cat-table">
           <table class="table table-bordered table-striped table-light">
             <thead>
@@ -45,16 +52,8 @@
           </table>
         </div>
       </div>
-    
-      <div class="col-sm-8">
-        <div id="map"></div>
-        <script type="text/javascript" src="javascripts/map.js"></script>
-        <script src='https://maps.googleapis.com/maps/api/js?key=<%=key%>&callback=initMap'
-          async defer ></script>
-      </div>
 
     </div>
-    
   </main>
 
   <footer>

@@ -15,7 +15,7 @@ function initMap() {
     });
   }
 
-  function addCats(map) {
-    
+  for(var i in cats) {
+    console.log(cats[i].color + cats[i].dateFound + cats[i].breed + cats[i].size);
   }
 }

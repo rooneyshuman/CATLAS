@@ -1,12 +1,17 @@
 #map {
     height: 600px; 
     width: auto;
+    margin: 20px;
+    margin-right: 5px;
 }
 
 #cat-table {
-    margin-left: 20px;
+    width: auto;
+    margin: 20px;
+    margin-left: 5px;
 }
 
 .row {
     width: auto;
+    margin: 0px;
 }
