@@ -3,12 +3,14 @@
     width: auto;
     margin: 20px;
     margin-right: 5px;
+    margin-top: 0px;
 }
 
 #cat-table {
     width: auto;
     margin: 20px;
     margin-left: 5px;
+    margin-top: 0px;
 }
 
 .row {
