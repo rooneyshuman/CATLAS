@@ -42,7 +42,26 @@
 
             infowindow.push( 
               new google.maps.InfoWindow({
-                content: '<p><%= cats[i].color %></p>'
+                content:  '<table>' + 
+                            '<table class="table table-bordered table-light">' +
+                              '<tr>' +
+                                '<th>Color</th>' +
+                                '<td><%= cats[i].color %></td>' +
+                              '</tr>' +
+                              '<tr>' +
+                                '<th>Date Found</th>' +
+                                '<td><%= cats[i].dateFound %></td>' +
+                              '</tr>' +
+                              '<tr>' +
+                                '<th>Breed</th>' +
+                                '<td><%= cats[i].breed %></td>' +
+                              '</tr>' +
+                              '<tr>' +
+                                '<th>Size</th>' +
+                                '<td><%= cats[i].size %></td>' +
+                              '</tr>' +
+                            '</table>' +
+                          '</table>'
             }));
 
             marker[<%= i %>].addListener('click', function() {
