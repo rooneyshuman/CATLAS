@@ -3,6 +3,7 @@
 
 <head>
   <% include partials/head %>
+  <link rel='stylesheet' href='stylesheets/map.css' />
 </head>
 
 <body>
@@ -13,34 +14,76 @@
 
   <main>
     <div class="row">
-      <div class="col-sm-8">
-        <div class="jumbotron">
-          <h1>Map goes here!</h1>
-        </div>
+    
+      <div class="col-sm-7">
+        <div id="map"></div>
+
+        <script type="text/javascript">
+          function initMap() {
+            var portland = {lat: 45.523064, lng: -122.676483};
+
+            // init the map
+            var map = new google.maps.Map(
+              document.getElementById('map'), 
+              {zoom: 12, center: portland}
+            );
+
+            var marker = [];
+            var infowindow = [];
+
+            <% for(var i in cats) { %>
+
+            marker.push(
+              new google.maps.Marker({
+                position: {lat: <%= cats[i].location.lat %>, lng: <%= cats[i].location.long %>},
+                map: map,
+                icon: 'https://raw.githubusercontent.com/rooneyshuman/CATLAS/master/public/images/favicon.ico'
+            }));
+
+            infowindow.push( 
+              new google.maps.InfoWindow({
+                content: '<p><%= cats[i].color %></p>'
+            }));
+
+            marker[<%= i %>].addListener('click', function() {
+              for(j = 0; j < infowindow.length; ++j) {
+                infowindow[j].close();
+              }
+              infowindow[<%= i %>].open(map, marker[<%= i %>]);
+            });
+
+            <% } %>
+          }
+        </script>
+        <script src='https://maps.googleapis.com/maps/api/js?key=<%=key%>&callback=initMap'
+          async defer ></script>
       </div>
 
-      <div class="col-sm-4">
-        <div>
-          <h3>List of mapped cats</h3>
+      <div class="col-sm-5">
+        <div id="cat-table">
           <table class="table table-bordered table-striped table-light">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <!-- <th scope="col">#</th> -->
                 <th scope="col">Color</th>
                 <th scope="col">Date Found</th>
-                <!-- <th scope="col">Longitude</th>
-                <th scope="col">Latitude</th> -->
+                <!--
+                <th scope="col">Longitude</th>
+                <th scope="col">Latitude</th>
+                -->
                 <th scope="col">Breed</th>
                 <th scope="col">Size</th>
               </tr>
             </thead>
             <% for(var i in cats) { %>
             <tr>
-              <th scope="row"><%= i %></th>
+              <!-- <th scope="row"><%= parseInt(i)+1 %></th> -->
               <td><%= cats[i].color %></td>
               <td><%= cats[i].dateFound %></td>
-              <!-- <td><%= cats[i].location.long %></td>
-              <td><%= cats[i].location.lat %></td> -->
+              <!--
+              <td><%= cats[i].location.long %></td>
+              <td><%= cats[i].location.lat %></td>
+              -->
               <td><%= cats[i].breed %></td>
               <td><%= cats[i].size %></td>
             </tr>
