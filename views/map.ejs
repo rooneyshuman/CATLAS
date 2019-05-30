@@ -20,12 +20,20 @@
 
         <script type="text/javascript">
           function initMap() {
-            var location = {lat: 45.523064, lng: -122.676483}; //Portland, OR, USA
+            var catCenters = [
+              {lat: 45.523064, lng: -122.676483}, //Portland, OR, USA
+              {lat: 33.7355747, lng: 132.483373}, //Aoshima, Japan (Cat Island)
+              {lat: 41.8898789, lng: 12.492483}, //Colosseum, Rome, Italy
+              {lat: 29.9751153, lng: 31.1375191} //The Sphnix, Giza, Egypt
+              {lat: 42.2156132, lng: -73.8645392} //Catskill, NY, USA
+            ]
+            var index = Math.floor(Math.random() * catCenters.length);
+            var location = catCenters[index];
 
             // init the map
             var map = new google.maps.Map(
               document.getElementById('map'), 
-              {zoom: 12, center: location}
+              {zoom: 14, center: location}
             );
 
             var marker = [];
@@ -75,17 +83,19 @@
 
             //get user's current location and set map to center on it
             if(navigator.geolocation) {
-              coords = navigator.geolocation.getCurrentPosition(function (pos) {
+              function getPosition(pos) {
                 userLoc = {
                   lat: pos.coords.latitude,
                   lng: pos.coords.longitude
                 };
-                marker.push( new google.maps.Marker({
-                  position: userLoc,
-                  map: map,
-                }));
                 map.setCenter(userLoc);
-              });
+              }
+              function error() {
+                alert("Location services not enabled on browser");
+              } 
+              coords = navigator.geolocation.getCurrentPosition(getPosition, error);
+            } else {
+              alert("Browser doesn't support location services.");
             }
           }
         </script>
