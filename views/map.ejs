@@ -20,12 +20,12 @@
 
         <script type="text/javascript">
           function initMap() {
-            var portland = {lat: 45.523064, lng: -122.676483};
+            var location = {lat: 45.523064, lng: -122.676483}; //Portland, OR, USA
 
             // init the map
             var map = new google.maps.Map(
               document.getElementById('map'), 
-              {zoom: 12, center: portland}
+              {zoom: 12, center: location}
             );
 
             var marker = [];
@@ -72,6 +72,21 @@
             });
 
             <% } %>
+
+            //get user's current location and set map to center on it
+            if(navigator.geolocation) {
+              coords = navigator.geolocation.getCurrentPosition(function (pos) {
+                userLoc = {
+                  lat: pos.coords.latitude,
+                  lng: pos.coords.longitude
+                };
+                marker.push( new google.maps.Marker({
+                  position: userLoc,
+                  map: map,
+                }));
+                map.setCenter(userLoc);
+              });
+            }
           }
         </script>
         <script src='https://maps.googleapis.com/maps/api/js?key=<%=key%>&callback=initMap'
