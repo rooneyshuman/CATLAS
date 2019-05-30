@@ -32,6 +32,9 @@
             var infowindow = [];
 
             <% for(var i in cats) { %>
+            
+            // Normalize breed to pull image from cat breed URL
+            var breedStr = "<%=cats[i].breed%>".replace(/ /g, '-');  
 
             marker.push(
               new google.maps.Marker({
@@ -47,6 +50,7 @@
                               '<tr>' +
                                 '<th>Color</th>' +
                                 '<td><%= cats[i].color %></td>' +
+                                '<td rowspan="4"><img src="https://www.catbreedslist.com/uploads/allimg/cat-pictures/' + breedStr + '-1.jpg" style="width:200px; height:auto;"></td>' +
                               '</tr>' +
                               '<tr>' +
                                 '<th>Date Found</th>' +
