@@ -21,7 +21,7 @@ function getLocation() {
   if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(getPosition, error);
   else
-    error();
+    alert("Browser doesn't support location services.");
 }
 
 function getPosition(position) {
