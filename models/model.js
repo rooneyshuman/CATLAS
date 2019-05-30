@@ -10,8 +10,8 @@ const cat = new mongoose.Schema({
       default : Date.now
     },
     location : {
-      long: Number,
       lat: Number,
+      long: Number,
     },
     breed : String,
     size : String
