@@ -1,3 +1,7 @@
 .row {
     margin: 0px;
 }
+
+#map_example {
+    width: 100%;
+}
