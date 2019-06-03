@@ -8,31 +8,47 @@
 
 <body>
 
-    <header>
-        <% include partials/header %>
-    </header>
+  <header>
+    <% include partials/header %>
+  </header>
 
-    <main>
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="jumbotron">
-                    <h1>About Catlas</h1>
-                    <p>Connecting you with your neighborhood cats!</p>
-                </div>
-            </div>
+  <main>
 
-            <div class="col-sm-4">
-                <div class="well">
-                    <h3>TO DO: Meet the dev team!</h3>
-                </div>
-            </div>
-
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>About Catlas</h1>
+          <p>Catlas is your cat atlas: connecting you with your local cats. Add local cats to the database so that others can go and pet them. Or check the map to see the cats in your local area so you can pet them! Catlas is here to fulfill your outdoor cat petting needs, whether just a jaunt through the neighborhood or on a cat-petting tour about town!</p>
         </div>
-    </main>
+        <div class="col-sm-6">
+          <img src="images/map-example.png" class="example_img">
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <% include partials/footer %>
-    </footer>
+    <div class="jumbotron" id="bios">
+      <h1>Meet the Devs</h1>
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="images/Belén.jpg" class="profile_img">
+          <h3>Belén Bustamante</h3>
+          <a href="https://github.com/rooneyshuman" target="_blank" type="submit" class="btn btn-info btn-md">GitHub</a>
+          <a href="https://www.linkedin.com/in/belen-bustamante/" target="_blank" type="submit" class="btn btn-info btn-md">LinkedIn</a>
+        </div>
+        <div class="col-sm-6">
+          <img src="images/Mack.png" class="profile_img">
+          <h3>Mack Cooper</h3>
+          <a href="https://github.com/mackkcooper" target="_blank" type="submit" class="btn btn-info btn-md">GitHub</a>
+          <a href="https://www.linkedin.com/in/mackkirklandcooper/" target="_blank" type="submit" class="btn btn-info btn-md">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+      <% include partials/footer %>
+  </footer>
 
 </body>
 
