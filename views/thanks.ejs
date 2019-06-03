@@ -3,6 +3,7 @@
 
 <head>
   <% include partials/head %>
+  <link rel='stylesheet' href='/stylesheets/thanks.css' />
 </head>
 
 <body>
@@ -12,12 +13,17 @@
   </header>
 
   <main>
-    <div>
+
+    <div class="jumbotron">
+      <h1>Your cat has been added to the database!</h1>
+      <img src="images/thank-you-cat.jpg" class="example_img">
       <div class="container">
-        <p>Stray Cat Mapper</p>
-        <p> Thanks for adding to our cat map!</p>
+      <a href="/form" type="submit" class="btn btn-info btn-lg">Add Another Cat</a>
+      <a href="/map" type="submit" class="btn btn-info btn-lg">Go to the Map</a>
       </div>
+
     </div>
+    
   </main>
 
   <footer>
