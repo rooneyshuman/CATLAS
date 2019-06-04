@@ -15,7 +15,7 @@
   <main>
     <div class="row">
 
-      <div class="col-sm-5">
+      <div class="col-sm-5 table-scroll">
         <div id="cat-table">
           <table class="table table-bordered table-striped table-light">
             <thead>
@@ -31,18 +31,20 @@
                 <th scope="col">Size</th>
               </tr>
             </thead>
-            <% for(var i in cats) { %>
-            <tr id="catid<%=i%>">
-              <!-- <th scope="row"><%= parseInt(i)+1 %></th> -->
-              <td><%= cats[i].color %></td>
-              <td><%= cats[i].dateFound %></td>
-              <!--
-              <td><%= cats[i].location.long %></td>
-              <td><%= cats[i].location.lat %></td>
-              -->
-              <td><%= cats[i].breed %></td>
-              <td><%= cats[i].size %></td>
-            </tr>
+            <div>
+              <% for(var i in cats) { %>
+              <tr id="catid<%=i%>">
+                <!-- <th scope="row"><%= parseInt(i)+1 %></th> -->
+                <td><%= cats[i].color %></td>
+                <td><%= cats[i].dateFound %></td>
+                <!--
+                <td><%= cats[i].location.long %></td>
+                <td><%= cats[i].location.lat %></td>
+                -->
+                <td><%= cats[i].breed %></td>
+                <td><%= cats[i].size %></td>
+              </tr>
+            </div>
             <% } %>
           </table>
         </div>
