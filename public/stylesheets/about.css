@@ -2,18 +2,93 @@
     margin: 0px;
 }
 
-.example_img {
-    width: 100%;
+.about {
+    background-image: url("/images/cat_on_fence.jpg");
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-position-y: 55%;
+    position: relative;
+    color: white;
+}
+
+#about-container {
+    font-size: 80px;
+    padding-left: 30%;
+}
+
+#info {
+    text-align: center;
+    padding-top: 150px;
+    font-size: 25px;
+    color: #547A82;
+    padding-bottom: 150px;
+    padding-left: 350px;
+    padding-right: 350px;
+    margin-bottom: 0;
+}
+
+.info-container {
+    background-color: white;
+}
+
+#bios {
+    color: #547A82;
 }
 
 .profile_img {
     display: block;
     margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
+    margin:0;
+    width: 200px;
+    height: auto;
 }
 
 #bios {
     text-align: center;
 }
+
+.name {
+    color: rgb(247, 102, 19);
+}
+
+.card {
+    background: transparent;
+    border: transparent;
+    width: 65%;
+}
+
+.card-body {
+    margin: 0;
+    padding: 0;
+}
+.left-block {
+   margin-left:auto;
+   margin-right:0;
+   display:block;
+}
+
+.right-block {
+   margin-left:0;
+   margin-right:auto;
+   display:block;
+}
+
+.jumbotron {
+    background: white;
+}
+
+.row-img {
+    display: flex;
+  }
+  
+ .column-img {
+    flex: 33.3%;
+    padding: 0px;
+  } 
+
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
