@@ -15,41 +15,36 @@
   <main>
     <div class="row">
 
-      <div class="col-sm-5 table-scroll">
-        <div id="cat-table">
-          <table class="table table-bordered table-striped table-light">
-            <thead>
-              <tr>
-                <!-- <th scope="col">#</th> -->
-                <th scope="col">Color</th>
-                <th scope="col">Date Found</th>
-                <!--
-                <th scope="col">Longitude</th>
-                <th scope="col">Latitude</th>
-                -->
-                <th scope="col">Breed</th>
-                <th scope="col">Size</th>
-              </tr>
-            </thead>
-            <div>
-              <% for(var i in cats) { %>
-              <tr id="catid<%=i%>">
-                <!-- <th scope="row"><%= parseInt(i)+1 %></th> -->
-                <td><%= cats[i].color %></td>
-                <td><%= cats[i].dateFound %></td>
-                <!--
-                <td><%= cats[i].location.long %></td>
-                <td><%= cats[i].location.lat %></td>
-                -->
-                <td><%= cats[i].breed %></td>
-                <td><%= cats[i].size %></td>
-              </tr>
+    <div class="col-sm-5 table-scroll pr-0">
+      <div id="cat-table">
+        <table class="table table-bordered table-striped table-light">
+        <% for(var i in cats) { %>
+          <tr>
+            <div class="card" id="catid<%=i%>">
+              <div class="card-body">
+                <div class="row">
+                <div class="col-sm-5">
+                  <% console.log(cats[i].breed) %>  
+                  <img src="https://www.catbreedslist.com/uploads/allimg/cat-pictures/<%=cats[i].breed.replace(/ /g, '-')%>-1.jpg" style="width:150px; height:auto;">
+                </div>
+                <div class="col-sm-7">
+                  <h5 class="card-text"><%=parseInt(i)+1%>. <%=cats[i].breed%></h5>
+                  <span class="fa fa-paw checked"></span>
+                  <span class="fa fa-paw checked"></span>
+                  <span class="fa fa-paw checked"></span>
+                  <span class="fa fa-paw"></span>
+                  <span class="fa fa-paw"></span>
+                  <p><%=cats[i].color%>, <%=cats[i].size%><br> Found: <%=cats[i].dateFound%></p>
+                </div>
+                </div>
+              </div>
             </div>
-            <% } %>
-          </table>
-        </div>
+          </tr>
+        <% } %>
+        </table>
       </div>
-    
+    </div>
+
       <div class="col-sm-7">
         <div id="map"></div>
 

@@ -18,6 +18,18 @@
     overflow: auto;
 }
 
+.checked {
+    color : rgb(247, 102, 19)
+  }
+
+.card {
+    color :rgb(30, 139, 139);
+}
+
+h5 {
+    font-weight: 200;
+}
+
 .row {
     width: auto;
     margin: 0px;
