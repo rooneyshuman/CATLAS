@@ -14,6 +14,7 @@ const cat = new mongoose.Schema({
       long: Number,
     },
     breed : String,
+    rating : Number,
     size : String
   });
   
