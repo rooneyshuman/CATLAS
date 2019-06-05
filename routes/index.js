@@ -48,8 +48,8 @@ router.post('/add', function (req, res) {
       lat: req.body.lat
     },
     breed: req.body.breed,
-    rating: req.body.rating,
     size: req.body.size,
+    rating: req.body.rating,
     done: false
   }, function (err, cat) {
     if (err)

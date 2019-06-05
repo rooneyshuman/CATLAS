@@ -14,8 +14,8 @@ const cat = new mongoose.Schema({
       long: Number,
     },
     breed : String,
-    rating : Number,
-    size : String
+    size : String,
+    rating : Number
   });
   
 module.exports = mongoose.model('Cat', cat);
