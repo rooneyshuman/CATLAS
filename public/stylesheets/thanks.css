@@ -1,9 +1,11 @@
 .jumbotron {
     text-align: center;
+    margin: 0px;
+    padding: 20px;
 }
 
 .example_img {
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }

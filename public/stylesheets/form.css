@@ -7,6 +7,34 @@ h2 {
     font-weight: bold;
 }
 
+.rating {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.rating-input {
+    float: right;
+    padding: 0;
+    margin: 0 0 0 -16px;
+    opacity: 0;
+}
+
+.fa-paw,
+.rating:hover .fa-paw {
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    float: right;
+    margin-right: 5px;
+}
+
+.fa-paw:hover,
+.fa-paw:hover ~ .fa-paw,
+.rating-input:checked ~ .fa-paw {
+    color : rgb(247, 102, 19);
+}
+
 /* All other sizes */
 @media (min-width: 576px) {
     #main_container {
