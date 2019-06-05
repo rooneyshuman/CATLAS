@@ -24,7 +24,6 @@
               <div class="card-body">
                 <div class="row">
                 <div class="col-sm-5">
-                  <% console.log(cats[i].breed) %>  
                   <img src="https://www.catbreedslist.com/uploads/allimg/cat-pictures/<%=cats[i].breed.replace(/ /g, '-')%>-1.jpg" style="width:150px; height:auto;">
                 </div>
                 <div class="col-sm-7">
@@ -49,6 +48,11 @@
         <div id="map"></div>
 
         <script type="text/javascript">
+          $('.card').hover(
+            function(){ $(this).addClass('border-info') },
+            function(){ $(this).removeClass('border-info') }
+          )
+
           function initMap() {
             var catCenters = [
               {lat: 45.523064, lng: -122.676483}, //Portland, OR, USA
@@ -85,25 +89,24 @@
             infowindow.push( 
               new google.maps.InfoWindow({
                 content:   
-                            '<table class="table table-bordered table-light">' +
-                              '<tr>' +
-                                '<th>Color</th>' +
-                                '<td><%= cats[i].color %></td>' +
-                                '<td rowspan="4"><img src="https://www.catbreedslist.com/uploads/allimg/cat-pictures/' + breedStr + '-1.jpg" style="width:200px; height:auto;"></td>' +
-                              '</tr>' +
-                              '<tr>' +
-                                '<th>Date Found</th>' +
-                                '<td><%= cats[i].dateFound %></td>' +
-                              '</tr>' +
-                              '<tr>' +
-                                '<th>Breed</th>' +
-                                '<td><%= cats[i].breed %></td>' +
-                              '</tr>' +
-                              '<tr>' +
-                                '<th>Size</th>' +
-                                '<td><%= cats[i].size %></td>' +
-                              '</tr>' +
-                          '</table>'
+                  '<div class="card transparent-border" id="catid<%=i%>">' +
+                    '<div class="card-body px-0 pt-2 pb-0">' +
+                      '<div class="row">' +
+                        '<div class="col-sm-5">' +
+                          '<img src="https://www.catbreedslist.com/uploads/allimg/cat-pictures/' + breedStr + '-1.jpg" style="width:100px; height:auto;">' +
+                        '</div>' +
+                        '<div class="col-sm-7">' +
+                          '<h5 class="card-text"><%=parseInt(i)+1%>. <%=cats[i].breed%></h5>' +
+                          '<span class="fa fa-paw checked"></span>' +
+                          '<span class="fa fa-paw checked"></span>' +
+                          '<span class="fa fa-paw checked"></span>' +
+                          '<span class="fa fa-paw"></span>' +
+                          '<span class="fa fa-paw"></span>' +
+                          '<p><%=cats[i].color%>, <%=cats[i].size%><br> Found: <%=cats[i].dateFound%></p>' +
+                        '</div>' +
+                      '</div>' +
+                    '</div>' +
+                  '</div>'
             }));
 
             marker[<%= i %>].addListener('click', function() {
