@@ -14,22 +14,19 @@
 
 #about-container {
     font-size: 80px;
-    padding-left: 30%;
+    text-align: center;
 }
 
 #info {
     text-align: center;
-    padding-top: 150px;
-    font-size: 25px;
+    font-size: 22px;
     color: #547A82;
-    padding-bottom: 150px;
-    padding-left: 350px;
-    padding-right: 350px;
     margin-bottom: 0;
 }
 
 .info-container {
     background-color: white;
+    padding: 75px 20%;
 }
 
 #bios {
@@ -38,24 +35,25 @@
 
 .profile_img {
     display: block;
-    margin: 20px;
-    margin:0;
-    width: 200px;
-    height: auto;
+    margin: 20px 0px;
+    max-width: 100%;
+    max-height: auto;
 }
 
 #bios {
     text-align: center;
+    background: white;
+    padding: 15px 10%;
 }
 
-.name {
+.name, .fab {
     color: rgb(247, 102, 19);
 }
 
 .card {
     background: transparent;
     border: transparent;
-    width: 65%;
+    width: 100%;
 }
 
 .card-body {
@@ -63,19 +61,13 @@
     padding: 0;
 }
 .left-block {
-   margin-left:auto;
-   margin-right:0;
+   /* margin-left: 25%; */
    display:block;
 }
 
 .right-block {
-   margin-left:0;
-   margin-right:auto;
+   /* margin-right: 25%; */
    display:block;
-}
-
-.jumbotron {
-    background: white;
 }
 
 .row-img {
@@ -86,9 +78,3 @@
     flex: 33.3%;
     padding: 0px;
   } 
-
-  @media screen and (max-width: 500px) {
-    .column {
-      width: 100%;
-    }
-  }
