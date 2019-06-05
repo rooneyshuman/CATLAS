@@ -34,3 +34,7 @@ h5 {
     width: auto;
     margin: 0px;
 }
+
+.transparent-border {
+    border: transparent;
+}
