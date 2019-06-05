@@ -28,11 +28,12 @@
                 </div>
                 <div class="col-sm-7">
                   <h5 class="card-text"><%=parseInt(i)+1%>. <%=cats[i].breed%></h5>
+                  <% for(var j = 0; j < cats[i].rating; ++j) { %>
                   <span class="fa fa-paw checked"></span>
-                  <span class="fa fa-paw checked"></span>
-                  <span class="fa fa-paw checked"></span>
+                  <% } %>
+                  <% for(var j = 0; j < 5 - cats[i].rating; ++j) { %>
                   <span class="fa fa-paw"></span>
-                  <span class="fa fa-paw"></span>
+                  <% } %>
                   <p><%=cats[i].color%>, <%=cats[i].size%><br> Found: <%=cats[i].dateFound%></p>
                 </div>
                 </div>
